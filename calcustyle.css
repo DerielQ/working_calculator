@@ -1,0 +1,97 @@
+body{
+    background-color: gray;
+}
+
+table{ 
+    border: 10px solid #242526; 
+    margin-left: auto; 
+    margin-right: auto;
+    height: 380px;
+    width: 300px;
+    background-color: #242526;
+    border-radius: 10px;
+} 
+
+input[type="text"] { 
+    padding: 20px 30px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+    border: 2px solid black;
+    color: white;
+    text-align: right;
+}
+
+.equals input[type="button"]{
+    width: 100%; 
+    padding: 20px 40px; 
+    background-color: #702963; 
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px;
+    font-family: 'Gill Sans MT';
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ops input[type="button"]{
+    width: 100%; 
+    padding: 20px 40px; 
+    background-color: #343434; 
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+}
+
+.numbtn input[type="button"]{
+    width: 100%; 
+    padding: 20px 40px; 
+    background-color: #36454F; 
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+} 
+
+.brand{
+    width: 100%; 
+    background-color: #242526; 
+    color: white; 
+    font-size: 40px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px;
+    font-family: 'Gill Sans MT';
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type="button"]:hover{
+    background-color: rgb(34, 54, 54)
+}
+
+input[type="button"]:active{
+    background-color: teal;
+}
+
+.ops input[type="button"]:hover{
+    background-color: #222121;
+}
+
+.ops input[type="button"]:active{
+    background-color: darkgray;
+}
+
+.equals input[type="button"]:hover{
+    background-color: #3e1937;
+}
+
+.equals input[type="button"]:active{
+    background-color: magenta;
+}

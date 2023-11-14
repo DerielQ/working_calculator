@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcustyle.css">
+    <title>Kasyo Calculator</title>
+</head>
+<body>
+    <table> 
+        <tr> 
+            <td colspan="4">
+                <input type="text" id="result" disabled> 
+            </td> 
+        </tr> 
+  
+        <tr> 
+            <td class="brand" colspan="2" class="brand">KASYO</td>
+            <td class="ops"><input type="button" value="C" onclick="cleardisplay()"></td>
+            <td class="ops"><input type="button" value="÷" onclick="divide()"></td> 
+        </tr>         
+        <tr> 
+            <td class="numbtn"><input type="button" value="7" onclick="disp(7)"></td> 
+            <td class="numbtn"><input type="button" value="8" onclick="disp(8)"></td> 
+            <td class="numbtn"><input type="button" value="9" onclick="disp(9)"></td> 
+            <td class="ops"><input type="button" value="×" onclick="multiply()"></td> 
+        </tr> 
+        <tr> 
+            <td class="numbtn"><input type="button" value="4" onclick="disp(4)"></td> 
+            <td class="numbtn"><input type="button" value="5" onclick="disp(5)"></td>
+            <td class="numbtn"><input type="button" value="6" onclick="disp(6)"></td>
+            <td class="ops"><input type="button" value="-" onclick="subtract()"></td>
+        </tr> 
+        <tr> 
+            <td class="numbtn"><input type="button" value="1" onclick="disp(1)"></td> 
+            <td class="numbtn"><input type="button" value="2" onclick="disp(2)"></td>
+            <td class="numbtn"><input type="button" value="3" onclick="disp(3)"></td> 
+            <td class="ops"><input type="button" value="+" onclick="add()"></td> 
+        </tr> 
+        <tr> 
+            <td class="numbtn"><input type="button" value="." onclick="disp('.')"></td> 
+            <td class="numbtn"><input type="button" value="0" onclick="disp(0)"></td>
+            <td colspan="2" class="equals"><input type="button" value="=" onclick="calcul()"></td>
+        </tr> 
+    </table>
+
+    <script>
+        let displayval = '';
+        let displayops = '';
+
+        function disp(number){
+            displayval += number;
+            document.getElementById("result").value = displayval;
+        }
+        function divide(){
+            displayops += "/";
+            displayval += displayops;
+            document.getElementById("result").value = displayval;
+        }
+
+        function multiply(){
+            displayops += "*";
+            displayval += displayops;
+            document.getElementById("result").value = displayval;
+        }
+
+        function subtract(){
+            displayops += "-";
+            displayval += displayops;
+            document.getElementById("result").value = displayval;
+        }
+
+        function add(){
+            displayops += "+";
+            displayval += displayops;
+            document.getElementById("result").value = displayval;
+        }
+
+        function cleardisplay(){
+            displayval = '';
+            displayops = '';
+            document.getElementById("result").value = "";
+        }
+
+        function calcul(){
+            const result = eval(displayval)
+            document.getElementById("result").value = result;
+            displayval = result.toString();
+            displayops += '';
+        }
+    </script>
+</body>
+</html> 
